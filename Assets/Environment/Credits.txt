@@ -1,0 +1,5 @@
+
+This package contains trees, details, terrain layers water elements curated from the Unity Standard Assets 2018 and Unity Terrain Sample Assets Pack packages.
+Many of the original .tif textures have been replaced with .png or jpg textures to reduce file size.
+
+You can individually instantiate rocks in your scene or you can add the rocks as "trees" in your terrain.  This second option allows you to mass place them.
