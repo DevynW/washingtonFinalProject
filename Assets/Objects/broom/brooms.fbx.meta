@@ -3,7 +3,17 @@ guid: d5189dcc0499aa74ba376c88f4fb588a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Simple Outdoor Broom Type A Alternate
+    second: {fileID: 2100000, guid: ab90409c0e593884dbe9ce8de13c8242, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Simple Outdoor Broom Type A Standard
+    second: {fileID: 2100000, guid: 822fbc76fd6434f4fb87cfe260c60ee9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
