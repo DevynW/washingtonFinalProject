@@ -8,7 +8,8 @@ public class gateInteraction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+     if (gameObject.CompareTag("backGate"))
+            isBackGate = true;
     }
 
     // Update is called once per frame
