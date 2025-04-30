@@ -17,9 +17,9 @@ public class equipTool : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if (GameManager.isArmed)
+       if (GameManager.isArmed && !GameManager.isFighting)
         { 
-            onBack.SetActive(!GameManager.isFighting);
+            onBack.SetActive(true);
             inHand.SetActive(GameManager.isFighting);
         }
     }
@@ -27,7 +27,13 @@ public class equipTool : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
-        Destroy(gameObject);
-        GameManager.isArmed = true;
+        {
+            GameManager.isArmed = true;
+            Debug.Log(GameManager.isArmed);
+            Debug.Log(GameManager.isFighting);
+            Destroy(gameObject);
+        }
+        
+       
     }
 }

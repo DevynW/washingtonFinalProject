@@ -625,8 +625,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1647516385}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.009652908, y: 0.7419526, z: 0.010682833, w: 0.67029774}
-  m_LocalPosition: {x: 351.44913, y: 216.77112, z: -339.45407}
+  m_LocalRotation: {x: -0.10812267, y: 0.7030713, z: 0.10950134, w: 0.6942693}
+  m_LocalPosition: {x: 357.89148, y: 210.00943, z: -340.17358}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -683,6 +683,30 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7fe1b3cec8a5b6e4fa02b35799b1a50f, type: 3}
       propertyPath: m_Name
       value: highpoly_town_house_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266623174291908683, guid: 7fe1b3cec8a5b6e4fa02b35799b1a50f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.69192314
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266623174291908683, guid: 7fe1b3cec8a5b6e4fa02b35799b1a50f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.69192255
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266623174291908683, guid: 7fe1b3cec8a5b6e4fa02b35799b1a50f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.14574935
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266623174291908683, guid: 7fe1b3cec8a5b6e4fa02b35799b1a50f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.14574924
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266623174291908683, guid: 7fe1b3cec8a5b6e4fa02b35799b1a50f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266623174291908683, guid: 7fe1b3cec8a5b6e4fa02b35799b1a50f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -23.79
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
