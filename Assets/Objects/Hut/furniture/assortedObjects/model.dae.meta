@@ -3,7 +3,67 @@ guid: 826afe03faa5f0648ac4d4b9d5c1e875
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Barrel_cap
+    second: {fileID: 2100000, guid: 9a95d7ea6494b564ba5688fcf3095c5f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base_plate
+    second: {fileID: 2100000, guid: 14a01569f84561745a3d94c489e39a51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cup_base
+    second: {fileID: 2100000, guid: 375b606745238a3458cd77a5020fb16d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cup_metal
+    second: {fileID: 2100000, guid: 749e798dda1f8a94982511eaf32a1bbc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_crate_base
+    second: {fileID: 2100000, guid: 42a804412348c8a49a4bfd2c448129e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wooden_crate_bars
+    second: {fileID: 2100000, guid: 5e033627512171b419a6d3af02b4c466, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: barrel_base
+    second: {fileID: 2100000, guid: 365dd1ef4a7fc2d4d97638a0eb4a09d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bucket_metal
+    second: {fileID: 2100000, guid: aa10cf4f930d2744b90f76c5a1a64b8c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bucket_wood
+    second: {fileID: 2100000, guid: 606101e4f01f0b14998fed9b752bcb80, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cup_handle
+    second: {fileID: 2100000, guid: bb92663c51797954cb74d672608a6647, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal_barrel_bars
+    second: {fileID: 2100000, guid: dc53177566fed544697d9f7e90559521, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wooden_bowl
+    second: {fileID: 2100000, guid: a9a57c6045e74ba449e427a01692e863, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

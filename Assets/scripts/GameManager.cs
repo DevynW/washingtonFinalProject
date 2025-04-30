@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static bool charHasKey = false;
+    public static bool isArmed = false;
+    public static bool isFighting = false;
     // Start is called before the first frame update
     void Start()
     {

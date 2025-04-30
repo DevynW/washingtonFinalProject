@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class gateInteraction : MonoBehaviour
 {
-    bool isBackGate = false;
     // Start is called before the first frame update
     void Start()
     {
-     if (gameObject.CompareTag("backGate"))
-            isBackGate = true;
+     
+            
+        
     }
 
     // Update is called once per frame
@@ -21,10 +21,17 @@ public class gateInteraction : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Animator animator = gameObject.GetComponent<Animator>();
+        Animator pAnimator = other.GetComponent<Animator>();
         if (other.gameObject.CompareTag("Player") && !gameObject.CompareTag("backGate") || 
             other.gameObject.CompareTag("Player") && gameObject.CompareTag("backGate") && GameManager.charHasKey == true)
         {
             animator.Play("openGate");
+            pAnimator.Play("throughGate");
         }
+    }
+
+    public void OnKeyRetrieval()
+    {
+        GameManager.charHasKey = true;
     }
 }

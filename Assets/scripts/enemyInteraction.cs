@@ -8,8 +8,6 @@ public class enemyInteraction : MonoBehaviour
     public bool isEnemy = false;
     public bool isRat = false;
     public bool isRoach = false;
-    public bool isArmed = false;
-    public bool isFighting = false;
     // Start is called before the first frame update
     void Start()
     {
