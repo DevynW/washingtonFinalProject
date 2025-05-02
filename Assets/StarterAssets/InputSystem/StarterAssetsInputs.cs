@@ -47,6 +47,8 @@ namespace StarterAssets
         public void OnFight(InputValue value)
         {
             Debug.Log("fighting");
+			Animator animator = gameObject.GetComponent<Animator>();
+			animator.Play("attack");
         }
 #endif
 

@@ -12,23 +12,24 @@ public class enemyInteraction : MonoBehaviour
     [SerializeField] float speed = 50f;
     float damageCaused = 0f;
     float enemyhealth = 100f;
+    float distance;
     // Start is called before the first frame update
     void Start()
     {
-        if (gameObject.CompareTag("Player"))
+        if (CompareTag("Player"))
         {
             isPlayer = true;
             damageCaused = 30f;
         }
-        if (gameObject.CompareTag("Rat") || gameObject.CompareTag("Roach"))
+        if (CompareTag("Rat") || CompareTag("Roach"))
             isEnemy = true;
-        if (gameObject.CompareTag("Rat"))
+        if (CompareTag("Rat"))
         {
             damageCaused = 30f;
             isRat = true;
 
         }
-        if (gameObject.CompareTag("Roach"))
+        if (CompareTag("Roach"))
         {
             damageCaused = 15f;
             isRoach = true;
@@ -45,17 +46,18 @@ public class enemyInteraction : MonoBehaviour
     void Update()
     {
         transform.LookAt(GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>());
-        if (isEnemy && GameManager.isFighting)
+        distance = Vector3.Distance(gameObject.transform.position,GameObject.FindGameObjectWithTag("Player").transform.position);
+        if (/*isEnemy && */GameManager.isFighting)
         {
-            if(isRat)
-                transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.Self);
+            if(isRat && distance <= 5f)
+                transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
-            if(isRoach)
-                transform.Translate(Vector3.back * speed * Time.deltaTime, Space.Self);
-
+            if(isRoach && distance <= 2f)
+                transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
         if (enemyhealth <= 0f)
         {
+            Debug.Log(name + "dying");
             Destroy(gameObject);
         }
             
@@ -65,21 +67,25 @@ public class enemyInteraction : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (isEnemy && other.gameObject.CompareTag("Player"))
+        if (isEnemy && other.gameObject.CompareTag("Player") && GameManager.isArmed)
         {
             GameManager.isFighting = true;
-            Debug.Log("worldStar");
+            Debug.Log(name + "worldStar");
         }
     }
+
+   
     private void OnCollisionEnter(Collision collision)
     {
         if (isEnemy && collision.gameObject.CompareTag("weapon"))
         {
             enemyhealth -= 30f;
+            Debug.Log(name + enemyhealth);
         }
         if (isEnemy && collision.gameObject.CompareTag("Player"))
         {
             GameManager.playerHealth -= damageCaused;
+            Debug.Log(name + GameManager.playerHealth);
         }
     }
 }

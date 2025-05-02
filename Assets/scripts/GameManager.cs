@@ -22,6 +22,14 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            isFighting = true;
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            isArmed = true;
+        }
         
         if (playerHealth < 100)
         {
@@ -36,5 +44,6 @@ public class GameManager : MonoBehaviour
         {
             Destroy(player);
         }
+        //Debug.Log(name + isFighting + isArmed);
     }
 }

@@ -26,11 +26,8 @@ public class gateInteraction : MonoBehaviour
             other.gameObject.CompareTag("Player") && gameObject.CompareTag("backGate") && GameManager.charHasKey == true)
         {
             //canvas statement
-            if (Input.GetKey(KeyCode.Tab))
-            {
                 animator.Play("gateUp");
                 pAnimator.Play("throughGate");
-            }
             
         }
     }
