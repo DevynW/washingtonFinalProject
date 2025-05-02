@@ -8,6 +8,9 @@ TagManager:
   - gate
   - backGate
   - wall
+  - key
+  - Rat
+  - Roach
   layers:
   - Default
   - TransparentFX

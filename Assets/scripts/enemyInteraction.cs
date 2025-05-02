@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class enemyInteraction : MonoBehaviour
@@ -8,6 +9,7 @@ public class enemyInteraction : MonoBehaviour
     public bool isEnemy = false;
     public bool isRat = false;
     public bool isRoach = false;
+    float speed;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,22 @@ public class enemyInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.LookAt(GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>());
+        if (isEnemy && GameManager.isFighting)
+        {
+            transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.Self);
+        }
+            
+       
+            
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (isEnemy && other.gameObject.CompareTag("Player"))
+        {
+            GameManager.isFighting = true;
+            Debug.Log("worldStar");
+        }
     }
 }

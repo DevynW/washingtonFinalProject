@@ -25,13 +25,19 @@ public class gateInteraction : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && !gameObject.CompareTag("backGate") || 
             other.gameObject.CompareTag("Player") && gameObject.CompareTag("backGate") && GameManager.charHasKey == true)
         {
-            animator.Play("openGate");
-            pAnimator.Play("throughGate");
+            //canvas statement
+            if (Input.GetKey(KeyCode.Tab))
+            {
+                animator.Play("openGate");
+                pAnimator.Play("throughGate");
+            }
+            
         }
     }
 
     public void OnKeyRetrieval()
     {
         GameManager.charHasKey = true;
+        Debug.Log("Char has Key");
     }
 }
