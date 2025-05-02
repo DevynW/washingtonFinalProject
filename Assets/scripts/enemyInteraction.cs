@@ -9,7 +9,7 @@ public class enemyInteraction : MonoBehaviour
     public bool isEnemy = false;
     public bool isRat = false;
     public bool isRoach = false;
-    [SerializeField] float speed = 3f;
+    [SerializeField] float speed = 50f;
     float damageCaused = 0f;
     float enemyhealth = 100f;
     // Start is called before the first frame update
@@ -51,7 +51,7 @@ public class enemyInteraction : MonoBehaviour
                 transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.Self);
 
             if(isRoach)
-                transform.Translate(-Vector3.forward * speed * Time.deltaTime, Space.Self);
+                transform.Translate(Vector3.back * speed * Time.deltaTime, Space.Self);
 
         }
         if (enemyhealth <= 0f)

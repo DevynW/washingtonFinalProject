@@ -36,7 +36,7 @@ public class equipTool : MonoBehaviour
 
        if (GameManager.isArmed && GameManager.isFighting)
         {
-            onBack.SetActive(!GameManager.isFighting);
+            onBack.SetActive(!GameManager.isFighting);//ask why openknife can't find this
             inHand.SetActive(GameManager.isFighting);
         }
     }
