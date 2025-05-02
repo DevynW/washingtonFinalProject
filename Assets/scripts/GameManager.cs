@@ -10,10 +10,12 @@ public class GameManager : MonoBehaviour
     public static float playerHealth = 100f;
     [SerializeField] float desiredInterval = 3f;
     float timeElapsed;
+    GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         timeElapsed = 0;
     }
 
@@ -29,6 +31,10 @@ public class GameManager : MonoBehaviour
                 playerHealth += 3;
                 timeElapsed = 0;
             }
+        }
+        if (playerHealth <= 0)
+        {
+            Destroy(player);
         }
     }
 }

@@ -11,6 +11,8 @@ TagManager:
   - key
   - Rat
   - Roach
+  - weapon
+  - holstered
   layers:
   - Default
   - TransparentFX

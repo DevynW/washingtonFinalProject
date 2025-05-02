@@ -9,18 +9,30 @@ public class enemyInteraction : MonoBehaviour
     public bool isEnemy = false;
     public bool isRat = false;
     public bool isRoach = false;
-    float speed;
+    [SerializeField] float speed = 3f;
+    float damageCaused = 0f;
+    float enemyhealth = 100f;
     // Start is called before the first frame update
     void Start()
     {
         if (gameObject.CompareTag("Player"))
+        {
             isPlayer = true;
-        if(gameObject.CompareTag("Rat") || gameObject.CompareTag("Roach"))
+            damageCaused = 30f;
+        }
+        if (gameObject.CompareTag("Rat") || gameObject.CompareTag("Roach"))
             isEnemy = true;
         if (gameObject.CompareTag("Rat"))
+        {
+            damageCaused = 30f;
             isRat = true;
+
+        }
         if (gameObject.CompareTag("Roach"))
+        {
+            damageCaused = 15f;
             isRoach = true;
+        }
     }
     /*
      * if enemy senses (outer collider) player & is rat, start sniffing around (play anim and look at)
@@ -35,7 +47,16 @@ public class enemyInteraction : MonoBehaviour
         transform.LookAt(GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>());
         if (isEnemy && GameManager.isFighting)
         {
-            transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.Self);
+            if(isRat)
+                transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.Self);
+
+            if(isRoach)
+                transform.Translate(-Vector3.forward * speed * Time.deltaTime, Space.Self);
+
+        }
+        if (enemyhealth <= 0f)
+        {
+            Destroy(gameObject);
         }
             
        
@@ -48,6 +69,17 @@ public class enemyInteraction : MonoBehaviour
         {
             GameManager.isFighting = true;
             Debug.Log("worldStar");
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (isEnemy && collision.gameObject.CompareTag("weapon"))
+        {
+            enemyhealth -= 30f;
+        }
+        if (isEnemy && collision.gameObject.CompareTag("Player"))
+        {
+            GameManager.playerHealth -= damageCaused;
         }
     }
 }
