@@ -28,11 +28,17 @@ public class gateInteraction : MonoBehaviour
             //canvas statement
             if (Input.GetKey(KeyCode.Tab))
             {
-                animator.Play("openGate");
+                animator.Play("gateUp");
                 pAnimator.Play("throughGate");
             }
             
         }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        Animator animator = gameObject.GetComponent<Animator>() ;
+        animator.Play("gateDown");
     }
 
     public void OnKeyRetrieval()

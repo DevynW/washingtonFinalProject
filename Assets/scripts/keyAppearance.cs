@@ -21,6 +21,7 @@ public class keyAppearance : MonoBehaviour
 
         foreach (GameObject gate in gates)
         {
+            Debug.Log("i found Key" + gate.name);
             keyRetrieved.AddListener(gate.GetComponent<gateInteraction>().OnKeyRetrieval);
         }
         x = Random.Range(xmin, xmax);

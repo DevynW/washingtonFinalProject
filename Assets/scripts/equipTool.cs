@@ -20,7 +20,9 @@ public class equipTool : MonoBehaviour
         inHand = GameObject.FindGameObjectWithTag("weapon");
 
         if (inHand != null )
-        Debug.Log("holstered found");
+        Debug.Log(name + ": weapon found");
+        else
+           Debug.Log(name + ": weapon not found");
 
         inHand.SetActive(GameManager.isFighting);
     }
