@@ -27,7 +27,7 @@ public class gateInteraction : MonoBehaviour
         {
             //canvas statement
                 animator.Play("gateUp");
-                pAnimator.Play("throughGate");
+                //pAnimator.Play("throughGate");
             
         }
     }
@@ -41,6 +41,8 @@ public class gateInteraction : MonoBehaviour
     public void OnKeyRetrieval()
     {
         GameManager.charHasKey = true;
-        Debug.Log("Char has Key");
+        Debug.Log(name + "Char has Key");
+        GameManager.isArmed = false;
+        GameManager.isFighting = false;
     }
 }

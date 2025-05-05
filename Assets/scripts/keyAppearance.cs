@@ -11,6 +11,7 @@ public class keyAppearance : MonoBehaviour
     float y;
     float z;
     [SerializeField] float xmin, xmax, ymin, ymax, zmin, zmax;
+    [SerializeField] GameObject backKey;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +42,8 @@ public class keyAppearance : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             keyRetrieved.Invoke();
+            backKey.SetActive(true);
+            Destroy(gameObject);
         }
         if (other.gameObject.CompareTag("wall") || other.gameObject.CompareTag("gate"))
         {

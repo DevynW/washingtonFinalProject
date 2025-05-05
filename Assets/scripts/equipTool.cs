@@ -10,7 +10,7 @@ public class equipTool : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        onBack = GameObject.FindGameObjectWithTag("holstered");
+        //onBack = GameObject.FindGameObjectWithTag("holstered");
 
         if (onBack != null )
         Debug.Log(name + "holstered found");
