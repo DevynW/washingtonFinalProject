@@ -13,6 +13,7 @@ TagManager:
   - Roach
   - weapon
   - holstered
+  - EOGTimeline
   layers:
   - Default
   - TransparentFX

@@ -6,12 +6,13 @@ using UnityEngine.Playables;
 public class gateInteraction : MonoBehaviour
 {
     PlayableDirector timeline;
+    GameObject timelineHolder;
 
     // Start is called before the first frame update
     void Start()
     {
-     
-          timeline = GetComponent<PlayableDirector>();    
+        timelineHolder = GameObject.FindGameObjectWithTag("EOGTimeline");
+        timeline = timelineHolder.GetComponent<PlayableDirector>();    
         
     }
 
@@ -25,16 +26,15 @@ public class gateInteraction : MonoBehaviour
     {
         Animator animator = gameObject.GetComponent<Animator>();
         Animator pAnimator = other.GetComponent<Animator>();
-        if (other.gameObject.CompareTag("Player") && !gameObject.CompareTag("backGate") || 
-            other.gameObject.CompareTag("Player") && gameObject.CompareTag("backGate") && GameManager.charHasKey == true)
+        if (other.gameObject.CompareTag("Player") && !gameObject.CompareTag("backGate"))
         {
             //canvas statement
                 animator.Play("gateUp");
-                //pAnimator.Play("throughGate");
+                pAnimator.Play("crawl");
             
         }
 
-        if(gameObject.CompareTag("backGate") && GameManager.charHasKey == true)
+        if(other.CompareTag("Player") && gameObject.CompareTag("backGate") && GameManager.charHasKey == true)
         {
             timeline.Play();
         }
