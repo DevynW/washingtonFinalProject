@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class gateInteraction : MonoBehaviour
 {
+    PlayableDirector timeline;
+
     // Start is called before the first frame update
     void Start()
     {
      
-            
+          timeline = GetComponent<PlayableDirector>();    
         
     }
 
@@ -29,6 +32,11 @@ public class gateInteraction : MonoBehaviour
                 animator.Play("gateUp");
                 //pAnimator.Play("throughGate");
             
+        }
+
+        if(gameObject.CompareTag("backGate") && GameManager.charHasKey == true)
+        {
+            timeline.Play();
         }
     }
 
