@@ -4416,6 +4416,8 @@ PlayableDirector:
     value: {fileID: 6982812146347350678}
   - key: {fileID: -3103286114883222137, guid: 9ac6c7e812a6cdf44852b31f9cea9c20, type: 2}
     value: {fileID: 1142551668}
+  - key: {fileID: 1661221394843277883, guid: 9ac6c7e812a6cdf44852b31f9cea9c20, type: 2}
+    value: {fileID: 2049296609}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &859998775
@@ -10664,7 +10666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 5
-  m_FollowOffset: {x: 0, y: 2.4, z: -3.44}
+  m_FollowOffset: {x: 0, y: 2.4, z: -2.75}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -13302,15 +13304,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 514354799244363469, guid: e5bdd4139c5bbfe4d8cf96b434d7a806, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -35.98
+      value: -35.89
       objectReference: {fileID: 0}
     - target: {fileID: 514354799244363469, guid: e5bdd4139c5bbfe4d8cf96b434d7a806, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.67
       objectReference: {fileID: 0}
     - target: {fileID: 514354799244363469, guid: e5bdd4139c5bbfe4d8cf96b434d7a806, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.54
+      value: 5.661
       objectReference: {fileID: 0}
     - target: {fileID: 514354799244363469, guid: e5bdd4139c5bbfe4d8cf96b434d7a806, type: 3}
       propertyPath: m_LocalRotation.w

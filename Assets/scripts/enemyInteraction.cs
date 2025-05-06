@@ -49,7 +49,7 @@ public class enemyInteraction : MonoBehaviour
         distance = Vector3.Distance(gameObject.transform.position,GameObject.FindGameObjectWithTag("Player").transform.position);
         if (/*isEnemy && */GameManager.isFighting)
         {
-            if(isRat && distance <= 5f)
+            if(isRat && distance <= 3f)
                 transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
             if(isRoach && distance <= 2f)
