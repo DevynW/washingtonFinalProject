@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class equipTool : MonoBehaviour
 {
     [SerializeField] GameObject onBack;
     [SerializeField] GameObject inHand;
-    
+    [SerializeField] PlayableDirector BOGtimeline;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,5 +60,10 @@ public class equipTool : MonoBehaviour
         }
         
        
+    }
+
+    public void onSignalEnter ()
+    {
+        BOGtimeline.Stop();
     }
 }
